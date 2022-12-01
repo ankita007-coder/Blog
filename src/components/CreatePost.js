@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
 import {firestore} from '../firebase';
-import { useFormInput } from './hooks';
+import { useFormInput } from '../hooks';
 
 
 export default function CreatePost() {
     const title = useFormInput('');
     const subtitle = useFormInput('');
-    const content = useState('');
+    const content = useFormInput('');
 
     function handleSubmit(e){
         e.preventDefault();
@@ -16,8 +15,8 @@ export default function CreatePost() {
 
         firestore.collection('posts').add({
             title: title.value,
-            content: content.value,
             subtitle: subtitle.value,
+            content: content.value,
             createdAt: new Date()
         });
     }

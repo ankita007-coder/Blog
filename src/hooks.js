@@ -10,7 +10,7 @@ function handleChange(e){
 }
 
 return{
-    value,
-    onChange: handleChange
-}
+    value: value,
+    onChange: handleChange,
+};
 }

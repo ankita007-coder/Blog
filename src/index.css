@@ -13,8 +13,11 @@ code {
 }
 
 .container {
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
+}
+.home{
+  width: 80%;
 }
 .home h1 {
   text-align: center;
@@ -54,8 +57,10 @@ code {
 }
 #nav {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   display: flex;
+  background-color: rgb(255, 196, 226);
+  width: 100%;
 }
 #nav li {
   margin-left: 10px;
